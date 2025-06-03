@@ -1,5 +1,4 @@
 import { Countdown } from "@/components/countdown";
-import { RSVPForm } from "@/components/rsvp-form";
 import { ImageGallery } from "@/components/image-gallery";
 import { Carousel } from "@/components/carousel";
 import { CherryBlossom } from "@/components/cherry-blossom";
@@ -290,13 +289,21 @@ export default function Home() {
       </section>
 
       {/* RSVP Section */}
-      <section id="rsvp" className="py-20 bg-white">
+      <section id="rsvp" className="py-26 bg-[#f6f6f6]">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             RSVP
           </h2>
-          <div className="max-w-md mx-auto">
-            <RSVPForm />
+          <div className="max-w-xl mx-auto">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSc_QDS__Uw5NXweWaBDh9aoLcwz_gjMTkgYoic6CEqBm1llTQ/viewform?usp=header"
+              width="100%"
+              height="1000"
+              frameBorder="0"
+              scrolling="no"
+            >
+              Loading...
+            </iframe>
           </div>
         </div>
       </section>
