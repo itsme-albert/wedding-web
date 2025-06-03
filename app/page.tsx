@@ -1,84 +1,131 @@
-import { Section } from "@/components/ui/section";
-import { HeroSection } from "@/components/sections/hero-section";
+import { Countdown } from "@/components/countdown";
+import { RSVPForm } from "@/components/rsvp-form";
+import { ImageGallery } from "@/components/image-gallery";
+import { Carousel } from "@/components/carousel";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <main className="min-h-screen">
       {/* Hero Section */}
-      <HeroSection />
+      <section className="relative h-screen">
+        <div className="absolute inset-0">
+          <Carousel />
+        </div>
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 h-full flex items-center justify-center text-center text-white">
+          <div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-4">Mira & Dzun</h1>
+            <p className="text-xl md:text-2xl mb-8">September 6, 2024</p>
+            <div className="flex justify-center gap-4">
+              <a
+                href="#rsvp"
+                className="bg-white text-black px-8 py-3 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                RSVP
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Countdown Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Counting Down to Forever
+          </h2>
+          <Countdown />
+        </div>
+      </section>
 
       {/* Our Story Section */}
-      <Section className="py-20">
-        <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
-          Our Story
-        </h2>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <p className="text-gray-600 leading-relaxed">
-              [Your beautiful love story will be added here]
-            </p>
-          </div>
-          <div className="relative h-[400px] bg-gray-100 rounded-lg wedding-card">
-            {/* Placeholder for couple's photo */}
-            <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-              Photo Coming Soon
-            </div>
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Our Story
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <ImageGallery />
           </div>
         </div>
-      </Section>
+      </section>
 
-      {/* Event Details Section */}
-      <Section className="py-20 bg-pink-50">
-        <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
-          Event Details
-        </h2>
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="wedding-card p-8">
-            <h3 className="text-2xl font-serif mb-4">Ceremony</h3>
-            <p className="text-gray-600 mb-4">[Ceremony Location]</p>
-            <p className="text-gray-600 mb-4">[Date and Time]</p>
-            <div className="h-[300px] bg-gray-100 rounded-lg">
-              {/* Google Maps iframe will be added here */}
-              <div className="h-full flex items-center justify-center text-gray-400">
-                Map Coming Soon
-              </div>
+      {/* Wedding Program Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Wedding Program
+          </h2>
+          <div className="max-w-2xl mx-auto space-y-8">
+            <div className="flex items-center gap-4">
+              <div className="w-24 text-right font-semibold">3:30 PM</div>
+              <div className="flex-1">Assembly</div>
             </div>
-          </div>
-          <div className="wedding-card p-8">
-            <h3 className="text-2xl font-serif mb-4">Reception</h3>
-            <p className="text-gray-600 mb-4">[Reception Location]</p>
-            <p className="text-gray-600 mb-4">[Date and Time]</p>
-            <div className="h-[300px] bg-gray-100 rounded-lg">
-              {/* Google Maps iframe will be added here */}
-              <div className="h-full flex items-center justify-center text-gray-400">
-                Map Coming Soon
-              </div>
+            <div className="flex items-center gap-4">
+              <div className="w-24 text-right font-semibold">4:00 PM</div>
+              <div className="flex-1">Ceremony</div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-24 text-right font-semibold">5:00 PM</div>
+              <div className="flex-1">Photos</div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-24 text-right font-semibold">6:00 PM</div>
+              <div className="flex-1">Dinner and Toasts</div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-24 text-right font-semibold">7:00 PM</div>
+              <div className="flex-1">First Dance</div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-24 text-right font-semibold">8:00 PM</div>
+              <div className="flex-1">Party-party!</div>
             </div>
           </div>
         </div>
-      </Section>
+      </section>
+
+      {/* Venue Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Venue
+          </h2>
+          <div className="max-w-2xl mx-auto text-center">
+            <h3 className="text-2xl font-semibold mb-4">Caffe Arabica</h3>
+            <p className="text-gray-600 mb-8">
+              Blk 1 Lot 2 Saint Rose Village 1 Market Area
+              <br />
+              Santa Rosa City Laguna
+            </p>
+            <a
+              href="https://maps.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gray-900 text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors"
+            >
+              View Map
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* RSVP Section */}
-      <Section className="py-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-serif mb-8">RSVP</h2>
-          <p className="text-gray-600 mb-8">
-            Please respond by [RSVP deadline] to let us know if you can make it
-            to our special day.
-          </p>
-          <div className="h-[600px] bg-gray-100 rounded-lg wedding-card">
-            {/* Google Form iframe will be added here */}
-            <div className="h-full flex items-center justify-center text-gray-400">
-              RSVP Form Coming Soon
-            </div>
+      <section id="rsvp" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            RSVP
+          </h2>
+          <div className="max-w-md mx-auto">
+            <RSVPForm />
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* Footer */}
       <footer className="py-8 px-4 text-center text-gray-600">
         <p>© 2024 Mira & Dzun&apos;s Wedding. All rights reserved.</p>
       </footer>
-    </div>
+    </main>
   );
 }
