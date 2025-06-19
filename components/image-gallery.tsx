@@ -65,7 +65,7 @@ export function ImageGallery() {
                 />
               </div>
             </DialogTrigger>
-            <DialogContent className="flex flex-col items-center justify-center bg-black/70 backdrop-blur-sm shadow-2xl border-none w-auto max-w-full p-0 animate-zoom-in rounded-2xl">
+            <DialogContent className="flex flex-col items-center justify-center bg-black/30 backdrop-blur-sm shadow-2xl border-none w-auto max-w-[1900px] min-w-[900px] p-0 animate-zoom-in rounded-2xl">
               <DialogTitle>{image.alt}</DialogTitle>
               <button
                 onClick={() => setOpen(false)}
@@ -88,13 +88,13 @@ export function ImageGallery() {
                   />
                 </svg>
               </button>
-              <div className="relative flex items-center justify-center w-auto max-w-[1400px] aspect-[16/10] min-h-[400px] max-h-[80vh] p-4 sm:p-8">
+              <div className="relative flex items-center justify-center w-auto max-w-[1800px] aspect-[16/10] min-h-[600px] max-h-[90vh] p-4 sm:p-2">
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  width={1400}
-                  height={875}
-                  className="object-contain rounded-xl shadow-xl transition-transform duration-300 w-full h-full"
+                  width={1800}
+                  height={1125}
+                  className="object-contain rounded transition-transform duration-300 w-full h-full"
                   priority
                 />
               </div>
