@@ -1,34 +1,34 @@
 "use client";
 
 import Image from "next/image";
-import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "./ui/dialog";
 import { useState } from "react";
 import "./image-gallery.css";
 
 const images = [
   {
     src: "/images/sample-pic.jpg",
-    alt: "Mira and Dzun together",
+    alt: "",
     className: "col-span-2 row-span-2",
   },
   {
     src: "/images/sample-pic.jpg",
-    alt: "Mira and Dzun smiling",
+    alt: "",
     className: "col-span-1",
   },
   {
     src: "/images/sample-pic.jpg",
-    alt: "Mira and Dzun holding hands",
+    alt: "",
     className: "col-span-1",
   },
   {
     src: "/images/sample-pic.jpg",
-    alt: "Mira and Dzun at sunset",
+    alt: "",
     className: "col-span-1",
   },
   {
     src: "/images/sample-pic.jpg",
-    alt: "Mira and Dzun laughing",
+    alt: "",
     className: "col-span-1",
   },
 ];
@@ -66,6 +66,7 @@ export function ImageGallery() {
               </div>
             </DialogTrigger>
             <DialogContent className="flex flex-col items-center justify-center bg-black/70 backdrop-blur-sm shadow-2xl border-none w-auto max-w-full p-0 animate-zoom-in rounded-2xl">
+              <DialogTitle>{image.alt}</DialogTitle>
               <button
                 onClick={() => setOpen(false)}
                 className="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white text-black rounded-full p-2 shadow-md focus:outline-none focus:ring-2 focus:ring-primary"
