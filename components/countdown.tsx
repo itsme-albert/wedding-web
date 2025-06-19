@@ -18,10 +18,13 @@ export function Countdown() {
   });
 
   useEffect(() => {
-    const weddingDate = new Date("2025-10-23T00:00:00+08:00");
+    const startDate = new Date();
+    const endDate = new Date("2025-10-23T00:00:00+08:00");
+    const totalDifference = +endDate - +startDate;
+    let elapsedTime = 0;
 
     const calculateTimeLeft = () => {
-      const difference = +weddingDate - +new Date();
+      const difference = totalDifference - elapsedTime;
 
       if (difference > 0) {
         setTimeLeft({
@@ -30,6 +33,7 @@ export function Countdown() {
           minutes: Math.floor((difference / 1000 / 60) % 60),
           seconds: Math.floor((difference / 1000) % 60),
         });
+        elapsedTime += 1000; // Increment by 1 second
       }
     };
 
