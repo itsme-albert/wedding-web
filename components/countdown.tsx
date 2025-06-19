@@ -18,7 +18,7 @@ export function Countdown() {
   });
 
   useEffect(() => {
-    const weddingDate = new Date("2024-09-06T15:30:00");
+    const weddingDate = new Date("2025-10-23T00:00:00+08:00");
 
     const calculateTimeLeft = () => {
       const difference = +weddingDate - +new Date();

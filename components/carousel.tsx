@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const slides = [
   {
-    src: "/images/couple-1.svg",
+    src: "/images/sample-pic.jpg",
     alt: "Mira and Dzun together",
   },
   {
