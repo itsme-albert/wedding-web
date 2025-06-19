@@ -1,7 +1,9 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
+"use client";
+import React, { useState } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { MdInfo } from "react-icons/md";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const alertVariants = cva(
   "relative w-full rounded-lg border px-4 py-3 text-sm grid has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] grid-cols-[0_1fr] has-[>svg]:gap-x-3 gap-y-0.5 items-start [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current",
@@ -17,7 +19,7 @@ const alertVariants = cva(
       variant: "default",
     },
   }
-)
+);
 
 function Alert({
   className,
@@ -31,7 +33,7 @@ function Alert({
       className={cn(alertVariants({ variant }), className)}
       {...props}
     />
-  )
+  );
 }
 
 function AlertTitle({ className, ...props }: React.ComponentProps<"div">) {
@@ -44,7 +46,7 @@ function AlertTitle({ className, ...props }: React.ComponentProps<"div">) {
       )}
       {...props}
     />
-  )
+  );
 }
 
 function AlertDescription({
@@ -60,7 +62,35 @@ function AlertDescription({
       )}
       {...props}
     />
-  )
+  );
 }
 
-export { Alert, AlertTitle, AlertDescription }
+interface BannerProps {
+  message: string;
+}
+
+export const Banner: React.FC<BannerProps> = ({ message }) => {
+  const [visible, setVisible] = useState(true);
+
+  if (!visible) return null;
+
+  return (
+    <div className="w-full bg-yellow-200 text-yellow-900 px-4 py-3 flex items-center justify-between fixed top-0 left-0 z-50 shadow-md animate-fade-in">
+      <div className="flex items-center gap-2">
+        <span aria-hidden="true" className="inline-block">
+          <MdInfo size={24} className="text-yellow-700" />
+        </span>
+        <span className="font-semibold">{message}</span>
+      </div>
+      <button
+        className="ml-4 text-yellow-900 hover:text-yellow-700 font-bold text-xl focus:outline-none"
+        aria-label="Dismiss banner"
+        onClick={() => setVisible(false)}
+      >
+        &times;
+      </button>
+    </div>
+  );
+};
+
+export { Alert, AlertTitle, AlertDescription };

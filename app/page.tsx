@@ -2,10 +2,12 @@ import { Countdown } from "@/components/countdown";
 import { ImageGallery } from "@/components/image-gallery";
 import { Carousel } from "@/components/carousel";
 import { CherryBlossom } from "@/components/cherry-blossom";
+import { Banner } from "@/components/ui/alert";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <Banner message="This wedding website is under development." />
       {/* Hero Section */}
       <section className="relative h-screen">
         <div className="absolute inset-0">
@@ -70,13 +72,13 @@ export default function Home() {
                     className="text-2xl font-serif text-[var(--primary)] font-semibold animate-fade-in"
                     style={{ animationDelay: "0.1s" }}
                   >
-                    3:30 PM
+                    00:00 AM/PM
                   </div>
                   <div
                     className="text-sm text-gray-500 mt-1 animate-fade-in"
                     style={{ animationDelay: "0.2s" }}
                   >
-                    Assembly
+                    No details yet
                   </div>
                 </div>
                 <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[var(--primary)] group-hover:scale-125 transition-transform duration-300 z-10" />
@@ -85,13 +87,13 @@ export default function Home() {
                     className="text-xl font-serif text-[var(--text)] mb-2 animate-fade-in"
                     style={{ animationDelay: "0.3s" }}
                   >
-                    Assembly
+                    N/A
                   </h3>
                   <p
                     className="text-gray-600 animate-fade-in"
                     style={{ animationDelay: "0.4s" }}
                   >
-                    Guests arrive and take their seats
+                    No details yet
                   </p>
                 </div>
               </div>
@@ -103,13 +105,13 @@ export default function Home() {
                     className="text-2xl font-serif text-[var(--primary)] font-semibold animate-fade-in"
                     style={{ animationDelay: "0.5s" }}
                   >
-                    4:00 PM
+                    00:00 AM/PM
                   </div>
                   <div
                     className="text-sm text-gray-500 mt-1 animate-fade-in"
                     style={{ animationDelay: "0.6s" }}
                   >
-                    Ceremony
+                    No details yet
                   </div>
                 </div>
                 <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[var(--primary)] group-hover:scale-125 transition-transform duration-300 z-10" />
@@ -118,13 +120,13 @@ export default function Home() {
                     className="text-xl font-serif text-[var(--text)] mb-2 animate-fade-in"
                     style={{ animationDelay: "0.7s" }}
                   >
-                    Ceremony
+                    N/A
                   </h3>
                   <p
                     className="text-gray-600 animate-fade-in"
                     style={{ animationDelay: "0.8s" }}
                   >
-                    Exchange of vows and rings
+                    No details yet
                   </p>
                 </div>
               </div>
@@ -136,13 +138,13 @@ export default function Home() {
                     className="text-2xl font-serif text-[var(--primary)] font-semibold animate-fade-in"
                     style={{ animationDelay: "0.9s" }}
                   >
-                    5:00 PM
+                    00:00 AM/PM
                   </div>
                   <div
                     className="text-sm text-gray-500 mt-1 animate-fade-in"
                     style={{ animationDelay: "1.0s" }}
                   >
-                    Photos
+                    No details yet
                   </div>
                 </div>
                 <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[var(--primary)] group-hover:scale-125 transition-transform duration-300 z-10" />
@@ -151,13 +153,13 @@ export default function Home() {
                     className="text-xl font-serif text-[var(--text)] mb-2 animate-fade-in"
                     style={{ animationDelay: "1.1s" }}
                   >
-                    Photos
+                    N/A
                   </h3>
                   <p
                     className="text-gray-600 animate-fade-in"
                     style={{ animationDelay: "1.2s" }}
                   >
-                    Family and group photos
+                    No details yet
                   </p>
                 </div>
               </div>
@@ -169,13 +171,13 @@ export default function Home() {
                     className="text-2xl font-serif text-[var(--primary)] font-semibold animate-fade-in"
                     style={{ animationDelay: "1.3s" }}
                   >
-                    6:00 PM
+                    00:00 AM/PM
                   </div>
                   <div
                     className="text-sm text-gray-500 mt-1 animate-fade-in"
                     style={{ animationDelay: "1.4s" }}
                   >
-                    Dinner
+                    No details yet
                   </div>
                 </div>
                 <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[var(--primary)] group-hover:scale-125 transition-transform duration-300 z-10" />
@@ -184,13 +186,13 @@ export default function Home() {
                     className="text-xl font-serif text-[var(--text)] mb-2 animate-fade-in"
                     style={{ animationDelay: "1.5s" }}
                   >
-                    Dinner and Toasts
+                    N/A
                   </h3>
                   <p
                     className="text-gray-600 animate-fade-in"
                     style={{ animationDelay: "1.6s" }}
                   >
-                    Celebratory dinner and speeches
+                    No details yet
                   </p>
                 </div>
               </div>
@@ -202,13 +204,13 @@ export default function Home() {
                     className="text-2xl font-serif text-[var(--primary)] font-semibold animate-fade-in"
                     style={{ animationDelay: "1.7s" }}
                   >
-                    7:00 PM
+                    00:00 AM/PM
                   </div>
                   <div
                     className="text-sm text-gray-500 mt-1 animate-fade-in"
                     style={{ animationDelay: "1.8s" }}
                   >
-                    First Dance
+                    No details yet
                   </div>
                 </div>
                 <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[var(--primary)] group-hover:scale-125 transition-transform duration-300 z-10" />
@@ -217,13 +219,13 @@ export default function Home() {
                     className="text-xl font-serif text-[var(--text)] mb-2 animate-fade-in"
                     style={{ animationDelay: "1.9s" }}
                   >
-                    First Dance
+                    N/A
                   </h3>
                   <p
                     className="text-gray-600 animate-fade-in"
                     style={{ animationDelay: "2.0s" }}
                   >
-                    The newlyweds&apos; first dance
+                    No details yet
                   </p>
                 </div>
               </div>
@@ -235,13 +237,13 @@ export default function Home() {
                     className="text-2xl font-serif text-[var(--primary)] font-semibold animate-fade-in"
                     style={{ animationDelay: "2.1s" }}
                   >
-                    8:00 PM
+                    00:00 AM/PM
                   </div>
                   <div
                     className="text-sm text-gray-500 mt-1 animate-fade-in"
                     style={{ animationDelay: "2.2s" }}
                   >
-                    Party
+                    No details yet
                   </div>
                 </div>
                 <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[var(--primary)] group-hover:scale-125 transition-transform duration-300 z-10" />
@@ -250,13 +252,13 @@ export default function Home() {
                     className="text-xl font-serif text-[var(--text)] mb-2 animate-fade-in"
                     style={{ animationDelay: "2.3s" }}
                   >
-                    Party-party!
+                    N/A
                   </h3>
                   <p
                     className="text-gray-600 animate-fade-in"
                     style={{ animationDelay: "2.4s" }}
                   >
-                    Dancing and celebration
+                    No details yet
                   </p>
                 </div>
               </div>
@@ -272,17 +274,19 @@ export default function Home() {
             Venue
           </h2>
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-semibold mb-4">Caffe Arabica</h3>
+            <h3 className="text-2xl font-semibold mb-4">
+              Venue To Be Announced
+            </h3>
             <p className="text-gray-600 mb-8">
-              Blk 1 Lot 2 Saint Rose Village 1 Market Area
+              The specific venue details will be shared soon
               <br />
-              Santa Rosa City Laguna
+              Please check back later
             </p>
             <a
               href="https://maps.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gray-900 text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors"
+              className="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-full hover:bg-transparent hover:border-1 hover:border-black hover:text-black transition-colors"
             >
               View Map
             </a>
